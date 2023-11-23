@@ -13,24 +13,24 @@ public class ejercicio1 {
 	}
 
 //con un while compruebo los numeros max y min y luego con un contador cuento los mins y los max
-	public static void numeros(int numero) {
+	public static void numeros(int num) {
 		Scanner sc = new Scanner(System.in);
-		int numeromax = numero;
-		int numeromin = numero;
+		int numeromax = num;
+		int numeromin = num;
 		int contadormin = 0;
 		int contadormax = 0;
-		while (numero != 0) {
-			if (numero > numeromax) {
-				numeromax = numero;
-			} else if (numero < numeromin) {
-				numeromin = numero;
+		while (num != 0) {
+			if (num > numeromax) {
+				numeromax = num;
+			} else if (num < numeromin) {
+				numeromin = num;
 				contadormin++;
-			} else if (numeromax == numero) {
+			} else if (numeromax == num) {
 				contadormax++;
-			} else if (numeromin == numero)
+			} else{
 				contadormin++;
 			System.out.println("Dime el numero x: ");
-			numero = sc.nextInt();
+			num = sc.nextInt();
 		}
 		System.out.println("El numero maximo es: " + numeromax + " y se repite : " + contadormax + " veces");
 		System.out.println("El numero minimo es: " + numeromin + " y se repite : " + contadormin + " veces");
